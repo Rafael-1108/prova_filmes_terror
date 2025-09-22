@@ -29,8 +29,8 @@ const filmes = [
       anoLancamento: 2022,
       classificacao: 14,
       duracao: 90,
-      franquia: null,
-      sequencia: null
+      franquia: "Os Diários de Blackwood",
+      sequencia: 1
     },
     {
       id: 4,
@@ -51,8 +51,8 @@ const filmes = [
       anoLancamento: 2023,
       classificacao: 18,
       duracao: 100,
-      franquia: null,
-      sequencia: null
+      franquia: "O Assassino do Espelho",
+      sequencia: 1
     }
 ];
 
