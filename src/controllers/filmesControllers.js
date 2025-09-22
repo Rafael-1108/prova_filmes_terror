@@ -8,16 +8,23 @@ const getAllfilmes = (req, res) => {
     total: resultado.length,
     filmes: resultado
     });
+}
 
-    let subgenero = req.params.subgenero;
+const getFilmeBySubgenero = (req, res) => {
+    const subgenero = req.params.subgenero;
     const subgeneroEscolhido = filmes.filter(s => s.subgenero.toLowerCase() === subgenero.toLowerCase());
 
     if (!subgeneroEscolhido) {
         return res.status(400).json({
             succes: false,
             message: `O filme com o subgenero ${subgenero} não existe.`
-        })
+        });
     }
+
+    res.status(200).json ({
+        success: true,
+        message: subgeneroEscolhido
+    });
 }
 
 const getFilmeById = (req, res) => {
@@ -38,10 +45,8 @@ const getFilmeById = (req, res) => {
     });
 }
 
-const createFilme = (req, res) => {
+/*const createFilme = (req, res) => {
     const { titulo, diretor, subgenero, anoLancamento, classificacao, duracao, franquia, sequencia } = req.body;
+}*/
 
-    if ()
-}
-
-export default { getAllfilmes, getFilmeById };
+export default { getAllfilmes, getFilmeById, getFilmeBySubgenero };

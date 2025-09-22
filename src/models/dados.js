@@ -1,4 +1,4 @@
-const filmesDeTerror = [
+const filmes = [
     {
       id: 1,
       titulo: "A Noiva Fantasma",
@@ -58,4 +58,4 @@ const filmesDeTerror = [
 
 //duração em minutos
 
-export { filmesDeTerror };
+export default { filmes };
