@@ -195,13 +195,14 @@ const updateFilme = (req, res) => {
             message: `O filme com o id: ${id} não foi encontrado`
         });
     }
-
-    const filmesAtualizados = filmes.map(f => f.id === idParaEditar ? {
+}
+    /*const filmesAtualizados = filmes.map(f => f.id === idParaEditar ? {
         ...titulo,
-        ...(nome && {nome}),
+        ...( && {nome}),
         ...(ano && {ano} ),
         ...(cor && {cor}),
     }
-)
-}
+*/
 export { getAllFilmes, getFilmeById, getFilmeBySubgenero, getFilmeByDiretor, getFilmeByFranquia, getFilmesByDecada, createFilme, deleteFilme };
+
+//titulo, diretor, subgenero, anoLancamento, classificacao, duracao, franquia, sequencia
