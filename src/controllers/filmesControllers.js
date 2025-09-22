@@ -3,7 +3,7 @@ import dados from "../models/dados.js";
 const { filmes } = dados;
 let resultado = filmes;
 
-const getAllfilmes = (req, res) => {
+const getAllFilmes = (req, res) => {
     res.status(200).json({
     total: resultado.length,
     filmes: resultado
@@ -49,4 +49,4 @@ const getFilmeById = (req, res) => {
     const { titulo, diretor, subgenero, anoLancamento, classificacao, duracao, franquia, sequencia } = req.body;
 }*/
 
-export default { getAllfilmes, getFilmeById, getFilmeBySubgenero };
+export { getAllFilmes, getFilmeById, getFilmeBySubgenero };
