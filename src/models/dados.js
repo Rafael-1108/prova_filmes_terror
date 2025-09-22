@@ -53,6 +53,17 @@ const filmes = [
       duracao: 100,
       franquia: "O Assassino do Espelho",
       sequencia: 1
+    },
+    {
+    id: 6,
+    titulo: "A Casa dos Espelhos 2: Reflexos do Passado",
+    diretor: "Fernando Guedes",
+    subgenero: "Terror Psicológico",
+    anoLancamento: 2012,
+    classificacao: 16,
+    duracao: 105,
+    franquia: "A Casa dos Espelhos",
+    sequencia: 2
     }
 ];
 

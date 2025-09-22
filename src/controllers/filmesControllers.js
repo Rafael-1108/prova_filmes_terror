@@ -61,9 +61,28 @@ const getFilmeByFranquia = (req, res) => {
     });
 }
 
-const getFilmeByDecada = (req, res) => {
-    if ()
+const getFilmesByDecada = (req, res) => {
+  const decada = parseInt(req.params.decada);
+  const inicio = decada * 10 + 1900;
+  const fim = inicio + 9;     
+
+  const filtrados = filmes.filter(f =>
+    f.anoLancamento >= inicio && f.anoLancamento <= fim
+  );
+
+  if (!filtrados) {
+    return res.status(400).json({
+        succes: false,
+        message: `O filme com a década ${decada} não existe.`
+    });
+}
+
+  res.status(200).json ({
+    success: true,
+    message: filtrados
+    });  
 }    
+
 const getFilmeById = (req, res) => {
     const id = parseInt(req.params.id);
 
@@ -82,8 +101,8 @@ const getFilmeById = (req, res) => {
     });
 }
 
-/*const createFilme = (req, res) => {
+const createFilme = (req, res) => {
     const { titulo, diretor, subgenero, anoLancamento, classificacao, duracao, franquia, sequencia } = req.body;
-}*/
+}
 
-export { getAllFilmes, getFilmeById, getFilmeBySubgenero, getFilmeByDiretor, getFilmeByFranquia };
+export { getAllFilmes, getFilmeById, getFilmeBySubgenero, getFilmeByDiretor, getFilmeByFranquia, getFilmesByDecada };
