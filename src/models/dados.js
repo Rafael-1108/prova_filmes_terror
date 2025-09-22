@@ -6,7 +6,7 @@ const filmesDeTerror = [
       subgenero: "Terror Psicológico",
       anoLancamento: 2023,
       classificacao: 16,
-      duracao: "1h 45min",
+      duracao: 105,
       franquia: "Os Sussurros de Pedra Branca",
       sequencia: 1
     },
@@ -17,7 +17,7 @@ const filmesDeTerror = [
       subgenero: "Sobrenatural",
       anoLancamento: 2024,
       classificacao: 18,
-      duracao: "2h 10min",
+      duracao: 130,
       franquia: "O Olho da Escuridão",
       sequencia: 1
     },
@@ -28,7 +28,7 @@ const filmesDeTerror = [
       subgenero: "Terror Gótico",
       anoLancamento: 2022,
       classificacao: 14,
-      duracao: "1h 30min",
+      duracao: 90,
       franquia: null,
       sequencia: null
     },
@@ -39,7 +39,7 @@ const filmesDeTerror = [
       subgenero: "Possessão Demoníaca",
       anoLancamento: 2021,
       classificacao: 16,
-      duracao: "1h 55min",
+      duracao: 115,
       franquia: "Os Suspiros do Inferno",
       sequencia: 2
     },
@@ -50,8 +50,12 @@ const filmesDeTerror = [
       subgenero: "Slasher",
       anoLancamento: 2023,
       classificacao: 18,
-      duracao: "1h 40min",
+      duracao: 100,
       franquia: null,
       sequencia: null
     }
-  ];
+];
+
+//duração em minutos
+
+export { filmesDeTerror };
